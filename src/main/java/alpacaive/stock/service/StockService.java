@@ -19,6 +19,9 @@ public class StockService {
         // 갱신된 값을 저장
 
         Stock stock = stockRepository.findById(id).orElseThrow();
+        stock.decrease(quantity);
+
+        stockRepository.saveAndFlush(stock);
     }
 
 }
