@@ -1,9 +1,6 @@
 package alpacaive.stock.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Stock {
@@ -13,6 +10,10 @@ public class Stock {
 
     private Long productId;
     private Long quantity;
+
+    // Optimistic Lock (낙관적 락) 을 사용하기 위한 버전 필드 추가
+    @Version
+    private Long version;
 
     public Stock() {
     }
