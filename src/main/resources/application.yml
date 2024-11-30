@@ -8,6 +8,9 @@ spring:
     url: jdbc:mysql://localhost:3306/sys
     username: root
     password: 1234
+#    같은 데이터 소스를 사용할 거기 때문에 커넥션 풀 사이즈를 변경
+    hikari:
+      maximum-pool-size: 40
 
 logging:
   level:
