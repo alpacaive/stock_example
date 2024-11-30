@@ -5,7 +5,7 @@ spring:
     show-sql: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/sys
+    url: jdbc:mysql://localhost:3306/stock_example
     username: root
     password: 1234
 #    같은 데이터 소스를 사용할 거기 때문에 커넥션 풀 사이즈를 변경
